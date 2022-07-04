@@ -59,7 +59,7 @@ public class BddController extends MultiActionController {
    public ModelAndView list(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
              
-       return new ModelAndView("resultat").addObject("liste",new MagasinHelper().getClients());
+       return new ModelAndView("resultat").addObject("liste",new MagasinHelper().getAchats());
       
    }
  public ModelAndView add(HttpServletRequest request,

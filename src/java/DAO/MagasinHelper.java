@@ -48,6 +48,30 @@ public class MagasinHelper {
       
     return resultat;
 }
+    
+    public List getAchats(){
+        List <Customer> resultat=null;
+        Transaction tx=null;
+        try{
+            if(!session.isOpen())session=HibernateUtil.getSessionFactory().openSession();
+            session.flush();
+            
+             tx=session.beginTransaction();
+            Query q=session.createQuery("select a.productId, a.manufacturerId, a.productCode,a.purchaseCost,a.quantityOnHand,a.markup,a.available, a.description from Product a");
+            //Query q=session.createQuery("from Customer");
+            resultat=q.list();
+                    
+            
+        }
+        catch (Exception e) {
+        e.printStackTrace();
+        }
+       finally{
+          if (session.isOpen())session.close();
+        }
+      
+    return resultat;
+}
     public List getClients(String name){
         List resultat=null;
         Transaction tx=null;

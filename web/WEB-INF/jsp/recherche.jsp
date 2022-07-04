@@ -14,7 +14,7 @@
     <body>
         <form name="recherche" action="find.htm" method="POST">
            <p>
-                <label for="nom">Nom de l'entreprise</label>
+                <label for="nom">Client :</label>
                 <input type="text" name="nom"  size="30" id="nom" />
             </p>
             <input type="submit" value="rechercher"  />

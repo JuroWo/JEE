@@ -19,8 +19,8 @@
         
             <input type="submit" formaction="list.htm"  value="Lister"  />
             <input type="submit" formaction="add.htm" value="Ajouter"  />
-            <input type="submit" formaction="logout.htm" value="Se déconnecter"  />
             <input type="submit" formaction="formfind.htm" value="Rechercher"  />
+            <input type="submit" formaction="logout.htm" value="Deconnexion"  />
         </form>
     </body>
 </html>

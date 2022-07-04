@@ -14,29 +14,27 @@
     </head>
     <body>
         
-                
+        ${user.login}
         <table border="1" cellpadding="10">
            
            
               <TR>
-                    <c:forEach items="${colonnes}" var="col">
-                    <TD>${col}</TD> 
-                    </c:forEach>
+                  <TD>Product ID</TD>
+                  <TD>Manufacturer ID</TD>
+                  <TD>Product Code</TD>
+                  <TD>Purshase Cost</TD>
+                  <TD>Quantity</TD>
+                  <TD>Markup</TD>
+                  <TD>Available</TD>
+                  <TD>Description</TD>
                 </TR>
             
-                <c:forEach items="${liste}" var="client" varStatus="row" >
+                <c:forEach items="${liste}" var="achats" varStatus="row" >
                 <TR>
-                  <c:forEach items="${client}" var="cli" >  
-                    <TD>${cli}
+                  <c:forEach items="${achats}" var="achat" >  
+                    <TD>${achat}
                     </TD>
                   </c:forEach>
-                    <TD>
-                        <form name="Result" action="detail.htm"  method="POST">
-                        <input type=hidden name="num"  value="${liste[row.index][0]}"/>
-                        <input type=submit  value="Détail"  />
-                        </form>
-
-                    </TD>
                 </TR>
                 </c:forEach>
                 <%--   <c:forEach items="${liste}" var="client">
